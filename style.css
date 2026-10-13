@@ -2911,6 +2911,10 @@ h2 {
         font-size: 26px;
         white-space: nowrap;
     }
+
+    .contact-item a[href^="mailto"] {
+        font-size: 18px;
+    }
 }
 
 /* スマホ版の電話番号 */
@@ -2918,6 +2922,23 @@ h2 {
     .contact-item .contact-phone {
         font-size: 36px;
         letter-spacing: 1px;
+    }
+
+    /* スマホ版のトップ画像 */
+    .hero {
+        min-height: 300px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.8;
+        letter-spacing: 0;
+        word-break: keep-all;
+    }
+
+    .hero p {
+        font-size: 14px;
+        line-height: 1.8;
     }
 }
 

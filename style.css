@@ -476,22 +476,22 @@ h2 {
 
     display: grid;
 
-    grid-template-columns: 420px 1fr;
+    grid-template-columns: 580px 1fr;
 
-    gap: 70px;
+    gap: 40px;
 
     align-items: center;
 }
 
 .memorial-detail-image {
-    width: 420px;
+    width: 580px;
 
     text-align: center;
 }
 
 .memorial-detail-image img {
     width: 100%;
-    max-width: 420px;
+    max-width: 580px;
     height: auto;
 
     display: block;
@@ -2981,4 +2981,83 @@ h2 {
 .hero-content {
     position: relative;
     z-index: 2;
+}
+
+/* スマホ版：トップページのボタン下に余白を追加 */
+@media (max-width: 767px) {
+
+    .hero .button {
+        margin-bottom: 20px;
+    }
+
+}
+
+/* スマホ版：本文を左寄せにする */
+@media (max-width: 767px) {
+
+    .intro-text {
+        text-align: left;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+}
+
+/* パソコン版では指定した位置で改行 */
+.pc-only {
+    display: inline;
+}
+
+/* スマホ版では強制改行を無効にする */
+@media (max-width: 767px) {
+
+    .pc-only {
+        display: none;
+    }
+
+    .intro-text {
+        text-align: left;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
+
+}
+
+/* スマホ版：デジタルメモリアルのお問い合わせ文だけ左寄せ */
+@media (max-width: 767px) {
+    .digital-contact-text {
+        text-align: left;
+    }
+}
+
+/* デジタルメモリアル：メッセージ動画の画像 */
+.digital-message-image {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+/* スマホ版：デジタルメモリアルの文字の左右に余白をつける */
+@media screen and (max-width: 767px) {
+
+    .memorial-detail-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
+}
+
+/* デジタルメモリアル：見出しを大きくする */
+.notice-content h2 {
+    font-size: 40px;
+}
+
+@media screen and (max-width: 767px) {
+    .notice-content h2 {
+        font-size: 25px;
+    }
 }

@@ -2756,6 +2756,17 @@ h2 {
         line-height: 1.7;
     }
 
+    tal-contact-intro {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .digital-contact-intro h2 {
+        font-size: 30px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
     .about-block-content p {
         font-size: 14px;
         line-height: 2;
@@ -2767,18 +2778,7 @@ h2 {
    デジタルメモリアル お問い合わせ
 ========================= */
 
-.digital-contact-intro {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.digital-contact-intro h2 {
-    font-size: 30px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-}
-
-.digital-contact-intro>p:last-child {
+.digi .digital-contact-intro>p:last-child {
     font-size: 15px;
     line-height: 2;
 }
@@ -3058,6 +3058,311 @@ h2 {
 
 @media screen and (max-width: 767px) {
     .notice-content h2 {
-        font-size: 25px;
+        font-size: 30px;
+    }
+}
+
+/* スマホ版：デジタルメモリアルの文章を左詰め */
+@media screen and (max-width: 767px) {
+    .notice-content p {
+        text-align: left;
+    }
+}
+
+/* スマホ版：トップページのデジタルメモリアル見出し */
+@media screen and (max-width: 767px) {
+    #memorial .section-title h2 {
+        font-size: 34px !important;
+    }
+}
+
+/* 改行はスマホ版だけ表示 */
+.sp-only {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sp-only {
+        display: inline;
+    }
+}
+
+
+/* スマホ版：お問い合わせ見出しを少し大きく */
+@media screen and (max-width: 767px) {
+    #contact h2 {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+}
+
+/* スマホ版：デジタルメモリアルのページタイトル */
+@media screen and (max-width: 767px) {
+    .page-hero .page-hero-content h1 {
+        font-size: 28px !important;
+    }
+}
+
+/* スマホ版：ページタイトル下の説明文を一行にする */
+@media screen and (max-width: 767px) {
+    .page-hero .page-hero-content>p:not(.section-label) {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* スマホ版：デジタルメモリアルの導入見出し */
+@media screen and (max-width: 767px) {
+    .detail-intro h2 {
+        font-size: 28px;
+        line-height: 1.7;
+    }
+}
+
+
+/* デジタルメモリアルへ戻る：共通設定（パソコン版） */
+.detail-back {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+/* パソコン版：左側と下に余白 */
+.detail-back {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* スマホ版だけ中央配置 */
+@media screen and (max-width: 768px) {
+    .detail-back {
+        display: block;
+        width: fit-content;
+        margin: 0 auto 20px;
+    }
+}
+
+/* お問い合わせ見出し */
+.notice-heading {
+    text-align: center;
+}
+
+/* お問い合わせ：メインの文字 */
+.notice-title {
+    font-size: 32px;
+}
+
+/* お気軽にご相談ください：少し小さく */
+.notice-subtitle {
+    font-size: 20px;
+}
+
+/* スマホ版：お問い合わせ見出しを中央寄せ */
+@media screen and (max-width: 767px) {
+
+    .digital-contact-intro {
+        margin-bottom: 35px;
+        text-align: center;
+    }
+
+    .digital-contact-intro .notice-heading {
+        text-align: center;
+        font-size: 23px;
+        line-height: 1.7;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    .digital-contact-intro .notice-title {
+        font-size: 28px;
+    }
+
+    .digital-contact-intro .notice-subtitle {
+        font-size: 18px;
+    }
+}
+
+
+/* パソコン版：お問い合わせの上の余白を縮める */
+@media screen and (min-width: 768px) {
+    .contact.section {
+        padding-top: 5px;
+    }
+}
+
+
+/* スマホ版：ラベルと見出しは中央、本文は左詰め */
+@media screen and (max-width: 767px) {
+    .about-message-inner {
+        text-align: left;
+    }
+
+    .about-message-inner .section-label,
+    .about-message-inner h2 {
+        text-align: center;
+    }
+}
+
+/* お知らせセクションの見出し */
+.notice-box h2 {
+    font-size: 35px;
+}
+
+/* CONTACTセクションの上に余白を追加 */
+#contact.contact {
+    margin-top: 50px;
+}
+
+/* FEATURES：カードを横並びにする */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+    margin-top: 48px;
+}
+
+/* カードのデザインと高さ */
+.feature-grid .feature-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+    min-width: 0;
+    padding: 32px 28px;
+    background-color: #ffffff;
+    border: 1px solid #e9e3d9;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(23, 75, 53, 0.04);
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+/* 番号 */
+.feature-grid .feature-number {
+    display: block;
+    margin-bottom: 20px;
+    color: #b49a68;
+    font-family: serif;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+/* 見出し */
+.feature-grid .feature-card h3 {
+    margin: 0 0 16px;
+    color: #174b35;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+/* 説明文 */
+.feature-grid .feature-card p {
+    margin: 0;
+    color: #55534f;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+/* マウスを乗せたとき */
+@media (hover: hover) {
+    .feature-grid .feature-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 24px rgba(23, 75, 53, 0.09);
+    }
+}
+
+/* スマートフォンでは縦並び */
+@media (max-width: 767px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 32px;
+    }
+
+    .feature-grid .feature-card {
+        padding: 24px;
+    }
+
+    .feature-grid .feature-number {
+        margin-bottom: 12px;
+        font-size: 28px;
+    }
+}
+
+/* カード上部：番号とアイコン */
+.feature-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* 番号の下余白は親要素で管理 */
+.feature-grid .feature-card-top .feature-number {
+    margin-bottom: 0;
+}
+
+/* 右上のアイコン */
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    color: #b49a68;
+    background-color: #f7f4ee;
+    border-radius: 50%;
+}
+
+.feature-icon svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+/* スマートフォン */
+@media (max-width: 767px) {
+    .feature-card-top {
+        margin-bottom: 12px;
+    }
+
+    .feature-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .feature-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* スマホ表示：イントロの見出し */
+@media (max-width: 767px) {
+    .intro h2 {
+        font-size: 22px;
+    }
+}
+
+/* スマホ表示：デジタルメモリアルの見出し */
+@media (max-width: 767px) {
+    #memorial .section-title h2 {
+        font-size: 28px !important;
+    }
+}
+
+/* スマホ表示：葬儀費用の見出しと説明文 */
+@media (max-width: 767px) {
+    .price-items .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .price-items .section-heading>p:not(.section-label) {
+        font-size: 14px;
     }
 }
